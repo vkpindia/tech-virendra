@@ -11450,6 +11450,8 @@ h5,
   font-size: 20px;
   margin-bottom: 10px;
   font-weight: 500;
+  margin: 0;
+  padding-left: 5px;
 }
 
 .progress {
