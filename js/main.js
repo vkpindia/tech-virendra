@@ -135,13 +135,22 @@
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
-	        items:1
+			items:1,
+			autoHeight: true,
+			mouseDrag: false,
+            touchDrag: true
 	      },
 	      600:{
-	        items:1
+			items:1,
+			autoHeight: true,
+			mouseDrag: false,
+            touchDrag: true
 	      },
 	      1000:{
-	        items:1
+			items:1,
+			autoHeight: true,
+			mouseDrag: false,
+            touchDrag: true
 	      }
 	    }
 		});
