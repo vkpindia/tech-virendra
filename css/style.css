@@ -11675,9 +11675,26 @@ textarea.form-control {
   padding: 7em 0;
   position: relative;
 }
+.my-copyryt {
+  background-color: #2e8df5;
+  padding: 15px 0;
+}
+@media (max-width: 1366px) {
+  .ftco-section {
+    padding: 4.8em 0;
+  }
+}
 @media (max-width: 767.98px) {
   .ftco-section {
-    padding: 6em 0;
+    padding: 3em 0;
+  }
+  .ftco-footer .ftco-footer-widget h2 {
+    margin-bottom: 10px !important;
+  }
+  .my-copyryt {
+    background-color: #2e8df5;
+    padding: 8px 0;
+    font-size: 13px;
   }
 }
 
@@ -11696,7 +11713,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: #0075f6;
-  padding: 7em 0;
+  padding: 3em 0;
   z-index: 0;
 }
 .ftco-footer .ftco-footer-logo {
@@ -11868,7 +11885,7 @@ textarea.form-control {
   background-repeat: no-repeat;
   /* background-position: center center; */
 }
-.img-8{
+.img-8 {
   background-position: center center;
 }
 .image-popup {
@@ -12408,10 +12425,10 @@ textarea.form-control {
   }
 }
 
-section{
+section {
   overflow: hidden;
 }
-.error{
+.error {
   color: #ff0000;
   font-size: 12px;
 }
