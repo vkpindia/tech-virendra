@@ -6,27 +6,25 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- Microsoft Browser compatibility -->
-	<meta name="title" content="Virendra Pandey - Web Developer" />
-
+	<meta property="og:title" content="Virendra Pandey - Software Developer" />
+        <meta property="og:site_name" content="Virendra Pandey"/>
 	<meta property="og:description" content="Mission-driven Web developer with a passion for thoughtful UI design,
 	collaboration, and teaching." />
-
-	
-	<meta name="robots" content="noindex, nofollow" />
-	
-	<meta property="og:url" content="https://gifted-noyce-2d2cd3.netlify.com/" />
-	
-	<meta property="og:type" content="article" />
-	
-	<meta property="og:image:type" content="image/jpg" />
-	<meta property="og:image" content="https://gifted-noyce-2d2cd3.netlify.com/images/8.jpg" />
-	
+	<meta property="og:url" content="https://virendrapr.github.io/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://virendrapr.github.io/images/8.JPG" />
 	<meta name="keywords"
-		content="Developer, Angular, HTML, css3, CSS, javascript, typescript, scss, html5, node.js, react.js, node, react, virendra, software engineer, web developer" />
-	,
+		content="Virendrapr, Virendra, Developer, Angular, HTML, css3, CSS, javascript, typescript, scss, html5, node.js, react.js, node, react, virendra, software engineer, web developer" />
+	<meta property="og:locale" content="en_IN"/>
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@VirendraPnde"/>
+	<meta name="twitter:title" content="Virendra Pandey"/>
+	<meta name="twitter:description" content="Mission-driven Web developer with a passion for thoughtful UI design,
+	collaboration, and teaching"/>
+	<meta name="twitter:image" content="https://virendrapr.github.io/images/8.JPG"/>
+	<meta name="twitter:image:alt" content="Vrendra Pandey"/>
+	<meta name="theme-color" content="#0075f6"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link rel="canonical" href="http://virendra.online/" />
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -82,7 +80,7 @@
 						</div>
 						<div class="one-forth d-flex  align-items-center ftco-animate"
 							data-scrollax=" properties: { translateY: '70%' }">
-							<a href="www.youtube.com/watch?v=PDcevjQ3z-w"
+							<a href="//www.youtube.com/watch?v=PDcevjQ3z-w"
 								class="icon-video popup-youtube d-flex justify-content-center align-items-center">
 								<span class="ion-ios-play play"></span>
 							</a>
@@ -102,13 +100,13 @@
 				<div class="container">
 					<div class="row d-flex no-gutters slider-text align-items-end justify-content-end"
 						data-scrollax-parent="true">
-						<div class="one-third order-md-last img img-8" style="background-image:url(images/8.jpg);">
+						<div class="one-third order-md-last img img-8" style="background-image:url(images/8.JPG);">
 							<div class="overlay"></div>
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate"
 							data-scrollax=" properties: { translateY: '70%' }">
-							<a href="https://vimeo.com/45830194"
-								class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+							<a href="//www.youtube.com/watch?v=PDcevjQ3z-w"
+								class="icon-video popup-youtube d-flex justify-content-center align-items-center">
 								<span class="ion-ios-play play"></span>
 							</a>
 							<div class="text">
@@ -595,7 +593,7 @@
 
 			<div class="row no-gutters block-9">
 				<div class="col-md-6 order-md-last d-flex" data-aos="fade-left" data-aos-duration="2000">
-					<form id="conatctForm" method="POST" class="bg-light p-4 p-md-5 contact-form">
+					<form id="conatctForm" action="https://formspree.io/mvokelkj" method="POST" class="bg-light p-4 p-md-5 contact-form">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Your Name" name="name">
 						</div>
@@ -608,17 +606,19 @@
 								oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 						</div>
 						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"
-								name="comments"></textarea>
+							<textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"
+								></textarea>
 						</div>
+						<input type="hidden" name="_subject" value="New Request" />
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+							<input type="submit" value="Send Message" id="my-form-button" class="btn btn-primary py-3 px-5">
 						</div>
+						<p id="my-form-status text-primary" style="display:none">Thank you! I will reach you shortly.</p>
 					</form>
 				</div>
 
 				<div class="col-md-6 d-flex" data-aos="fade-right" data-aos-duration="2000">
-					<div class="img img-8" style="background-image: url(images/8.jpg);"></div>
+					<div class="img img-8" style="background-image: url(images/8.JPG);"></div>
 				</div>
 			</div>
 		</div>
@@ -707,7 +707,7 @@
 		</div>
 	</footer>
 
-	<div style="position: fixed; bottom: 10%; right: 2%;"><a
+	<div style="position: fixed; bottom: 10%; right: 2%; box-shadow:0px 0px 6px; border-radius:50px"><a
 			href="https://api.whatsapp.com/send?phone=+918756368558"><img width="50" src="images/whatsapp.png"
 				alt=""></a></div>
 
@@ -731,6 +731,7 @@
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<script src="js/validate.min.js"></script>
+<!-- 	<script src="js/email.js"></script> -->
 	<script src="js/main.js"></script>
 
 </body>

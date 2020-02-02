@@ -34,24 +34,12 @@
 			minlength: "Please enter valid mobile number (10 - digits)"
 		},
 	},
-	submitHandler: function (form) {
-		$.post("./request.php",
-		{
-			 name: $('input[name="name"]').val(),
-			 email: $('input[name="email"]').val(),
-			 phone: $('input[name="phone"]').val(),
-			 comments: $('textarea[name="comment"]').val()
-		},
-		function(data, status){
-			if(status='success')
-			{
-				alert("Message sent.");
-				$("#conatctForm").get(0).reset();
-			}
-		});
-		
-		return false;
-		//$('#registerForm').ajaxSubmit();
+	submitHandler: function (form, ev) {
+	              console.log("ev", ev);
+		      ev.preventDefault();
+		      var data = new FormData(form);
+		      ajax(form.method, form.action, data, success, error);
+	              return false;
 	}
 
 });
@@ -307,19 +295,52 @@
     }
   });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
+  $('.popup-youtube').magnificPopup({
     type: 'iframe',
     mainClass: 'mfp-fade',
     removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
+    preloader: true,
+    fixedContentPos: true
   });
 
-
+ $('.popup-youtube').click(function(){
+     return false;
+ });
 
 
 
 })(jQuery);
+// get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("conatctForm");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
 
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.style = "display: block";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
